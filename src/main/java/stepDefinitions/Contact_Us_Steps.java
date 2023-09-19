@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
+import static org.junit.Assert.*;
 
 import java.util.Map;
 
@@ -60,6 +60,6 @@ public class Contact_Us_Steps {
         WebElement ActualMessage = driver.findElement(By.xpath("//div[@id='contact_reply']/h1"));
         String ExpectedMessage = "Thank You for your Message!";
 
-        Assert.assertEquals(ActualMessage.getText(), ExpectedMessage);
+        assertEquals(ActualMessage.getText(), ExpectedMessage);
     }
 }
